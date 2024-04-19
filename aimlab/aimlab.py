@@ -1,6 +1,5 @@
 import pyxel
 import pyautogui as pag
-from random import randint
 
 class App:
   def __init__(self, target_size, target_color) -> None:
@@ -35,8 +34,8 @@ class App:
     return self.target_x//magnification, self.target_y//magnification
 
   def random_coordinates(self):
-    self.x = randint(100, self.height - 100)
-    self.y = randint(100, self.width - 100)
+    self.x = pyxel.rndi(100, self.height - 100)
+    self.y = pyxel.rndi(100, self.width - 100)
     return self.x, self.y
   
   # @staticmethod
